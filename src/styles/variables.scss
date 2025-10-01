@@ -1,0 +1,20 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #0000001A;
+  --gradient: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #e7f9fd 100%);
+
+  --border-radius-m: 60px;
+  --border-radius: 30px;
+  --border-radius-s: 16px;
+
+  --font-family-base: 'Manrope';
+
+  --container-width: #{fluid-to-laptop(
+      $container-desktop-width,
+      $container-laptop-width
+    )};
+  --container-padding-x: 16px;
+
+  --transition-duration: 0.2s;
+}

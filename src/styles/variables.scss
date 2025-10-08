@@ -1,7 +1,9 @@
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-accent: #FF7967;
   --color-gray: #0000001A;
+
   --gradient: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #e7f9fd 100%);
 
   --border-radius-m: 60px;
@@ -10,7 +12,7 @@
 
   --font-family-base: 'Inter';
 
-  --container-width: #{$container-desktop-width};
+  --container-width: #{$container-desktop-width}px;
   --container-padding-x: 16px;
 
   --transition-duration: 0.2s;

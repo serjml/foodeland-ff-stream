@@ -14,7 +14,11 @@
       position: fixed;
       z-index: var(--layer-mobile-menu);
       inset: 0;
-      background-image: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: var(--color-white);
+      transition-duration: var(--transition-duration);
 
       &:not(.is-active) {
         @include hide;
@@ -29,6 +33,11 @@
       @include tablet {
         column-gap: 30px;
       }
+
+      @include mobile {
+        flex-direction: column;
+        row-gap: 20px;
+      }
     }
 
     &-link {
@@ -42,5 +51,9 @@
     @include mobile {
       margin-left: auto;
     }
+  }
+
+  &__burger-button {
+    z-index: var(--layer-mobile-menu);
   }
 }

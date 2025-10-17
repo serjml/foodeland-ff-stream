@@ -1,5 +1,6 @@
 import './AuthorCard.scss'
 import clsx from 'clsx'
+import { Image } from 'minista'
 
 export default (props) => {
   const {

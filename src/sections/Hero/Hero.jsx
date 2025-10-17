@@ -1,4 +1,5 @@
 import './Hero.scss'
+import HeroCard from '@/components/HeroCard'
 
 export default () => {
   return (
@@ -13,15 +14,34 @@ export default () => {
         })}
       >
         <ul className="hero__slider-list swiper-wrapper">
-          <li className="hero__slider-item swiper-slide">
-            <div className="hero__card">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa illum nihil ratione voluptatibus. Asperiores pariatur, repellendus! Ab aut delectus, distinctio eos omnis quas voluptas. A alias aliquam aliquid architecto atque blanditiis cum debitis dolor dolorum eaque eius error, est excepturi explicabo, illum ipsa modi molestias mollitia numquam, officiis perspiciatis placeat porro provident quae quaerat quam quia ratione repellendus saepe similique tempore tenetur totam voluptate. Ab ea eveniet incidunt perferendis. Adipisci atque deleniti dolorum enim facilis in iure laudantium similique soluta. Cupiditate doloribus error et illo itaque laudantium maiores minus nisi numquam placeat provident quam quis rem repudiandae, similique velit.</div>
-          </li>
-          <li className="hero__slider-item swiper-slide">
-            <div className="hero__card">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa illum nihil ratione voluptatibus. Asperiores pariatur, repellendus! Ab aut delectus, distinctio eos omnis quas voluptas. A alias aliquam aliquid architecto atque blanditiis cum debitis dolor dolorum eaque eius error, est excepturi explicabo, illum ipsa modi molestias mollitia numquam, officiis perspiciatis placeat porro provident quae quaerat quam quia ratione repellendus saepe similique tempore tenetur totam voluptate. Ab ea eveniet incidunt perferendis. Adipisci atque deleniti dolorum enim facilis in iure laudantium similique soluta. Cupiditate doloribus error et illo itaque laudantium maiores minus nisi numquam placeat provident quam quis rem repudiandae, similique velit.</div>
-          </li>
-          <li className="hero__slider-item swiper-slide">
-            <div className="hero__card">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa illum nihil ratione voluptatibus. Asperiores pariatur, repellendus! Ab aut delectus, distinctio eos omnis quas voluptas. A alias aliquam aliquid architecto atque blanditiis cum debitis dolor dolorum eaque eius error, est excepturi explicabo, illum ipsa modi molestias mollitia numquam, officiis perspiciatis placeat porro provident quae quaerat quam quia ratione repellendus saepe similique tempore tenetur totam voluptate. Ab ea eveniet incidunt perferendis. Adipisci atque deleniti dolorum enim facilis in iure laudantium similique soluta. Cupiditate doloribus error et illo itaque laudantium maiores minus nisi numquam placeat provident quam quis rem repudiandae, similique velit.</div>
-          </li>
+          <HeroCard
+            category={{
+              imgSrc: '/src/assets/images/scroll.png',
+              label: 'Hot Recipes',
+            }}
+            title="Spicy delicious chicken wings"
+            TitleTag="h1"
+            description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim"
+            tags={[
+              {
+                iconName: 'timer',
+                label: '30 Minutes',
+              },
+              {
+                iconName: 'fork-knife',
+                label: 'Chicken',
+              },
+            ]}
+            author={{
+              imgSrc: '/src/assets/images/man.jpg',
+              name: 'John Smith',
+              date: {
+                dateTime: '2022-03-15',
+                label: '15 March 2022',
+              }
+            }}
+            imgSrc="/src/assets/images/chicken.jpg"
+          />
         </ul>
       </div>
     </section>

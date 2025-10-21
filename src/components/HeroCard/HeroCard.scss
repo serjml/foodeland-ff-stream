@@ -1,7 +1,6 @@
 .hero-card {
   display: grid;
   grid-template-columns: 48.4375% 1fr;
-  border-radius: var(--border-radius-m);
 
   &__body {
     padding: 50px;

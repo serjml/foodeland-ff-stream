@@ -58,20 +58,20 @@ export default (props) => {
             <Icon name="play" hasFill />
           </Button>
         </footer>
+        <img
+          className="hero-card__badge"
+          src="/images/badge.svg"
+          alt="Handpick recipies"
+          width={150}
+          height={150}
+          loading="lazy"
+        />
       </div>
       <Image
         className="hero-card__image"
         src={imgSrc}
         width={660}
         height={640}
-      />
-      <img
-        className="hero-card__badge"
-        src="/images/badge.svg"
-        alt="Handpick recipies"
-        width={150}
-        height={150}
-        loading="lazy"
       />
     </div>
   )

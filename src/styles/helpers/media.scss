@@ -22,7 +22,7 @@ $mobile-s: 480px;
   }
 }
 
-@mixin laptop {
+@mixin laptop-s {
   @media (width <= $laptop-s) {
     @content;
   }

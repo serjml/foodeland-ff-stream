@@ -10,7 +10,7 @@ export default () => {
       <div
         className="hero__slider swiper"
         data-js-slider={JSON.stringify({
-          spaceBetween: 40,
+          spaceBetween: 110,
           slidesPerView: 'auto',
           centeredSlides: true,
           initialSlide: 1,

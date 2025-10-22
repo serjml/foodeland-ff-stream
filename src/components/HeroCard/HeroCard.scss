@@ -1,10 +1,23 @@
 .hero-card {
+  position: relative;
   display: grid;
   grid-template-columns: 48.4375% 1fr;
 
   &__body {
     padding: 50px;
     background-color: var(--color-secondary);
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__badge {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    translate: -50% 0;
   }
 
   &__category {
@@ -16,6 +29,8 @@
     font-weight: 600;
     background-color: var(--color-white);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
 
     &:not(:last-child) {
       margin-bottom: 32px;
@@ -63,6 +78,10 @@
   }
 
   &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
     margin-top: auto;
   }
 }

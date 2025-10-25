@@ -1,5 +1,5 @@
 import Hero from '@/sections/Hero'
-import Cateegories from '@/sections/Cateegories'
+import Cateegories from '@/sections/Categories'
 
 export const metadata = {
   title: 'Home',

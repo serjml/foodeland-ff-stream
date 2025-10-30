@@ -1,59 +1,32 @@
-import './Categories.scss'
-import clsx from 'clsx'
+import './Recipes.scss'
 import Section from '@/layouts/Section'
 import Grid from '@/components/Grid'
-import CategoryCard from '@/components/CategoryCard'
+import RecipeCard from '@/components/RecipeCard'
+import recipes from './data.json'
+import RecipeBanner from '@/components/RecipeBanner'
 
-export default (props) => {
-  const {
-    className,
-  } = props
-
-  const categories = [
-    {
-      title: 'Breakfast',
-      imgSrc: '/src/assets/images/catigories/breakfast.png',
-      color: 'rgba(112, 130, 70)',
-    },
-    {
-      title: 'Vegan',
-      imgSrc: '/src/assets/images/catigories/vegan.png',
-      color: 'rgba(108, 198, 63)',
-    },
-    {
-      title: 'Meat',
-      imgSrc: '/src/assets/images/catigories/meat.png',
-      color: 'rgba(204, 38, 27)',
-    },
-    {
-      title: 'Dessert',
-      imgSrc: '/src/assets/images/catigories/Dessert.png',
-      color: 'rgba(240, 158, 0)',
-    },
-    {
-      title: 'Lunch',
-      imgSrc: '/src/assets/images/catigories/lunch.png',
-      color: 'rgba(0, 0, 0)',
-    },
-    {
-      title: 'Chocolate',
-      imgSrc: '/src/assets/images/catigories/chocolate.png',
-      color: 'rgba(0, 0, 0)',
-    },
-
-  ]
-
+export default () => {
   return (
-   <Section
-     title="Categories"
-     titleId="categories"
-     linkLabel="View All Categories"
-   >
-     <Grid columns={6}>
-       {categories.map((category, index) => (
-         <CategoryCard {...category} key={index} />
-       ))}
-     </Grid>
-   </Section>
+    <Section
+      title="Simple and tasty recipes"
+      titleId="recipes"
+      description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
+    >
+      <Grid columns={3}>
+        {recipes.map((recipe, index) => {
+          const {type, ...rest} = recipe
+
+          if (type === 'banner') {
+            return (
+              <RecipeBanner {...rest} key={recipe.title} />
+            )
+          }
+
+          return (
+            <RecipeCard {...rest} key={recipe.title} />
+          )
+        })}
+      </Grid>
+    </Section>
   )
 }

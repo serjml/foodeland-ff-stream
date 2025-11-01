@@ -1,15 +1,10 @@
 import './Categories.scss'
-import clsx from 'clsx'
 import Section from '@/layouts/Section'
 import Grid from '@/components/Grid'
 import CategoryCard from '@/components/CategoryCard'
 import categories from './data.json'
 
-export default (props) => {
-  const {
-    className,
-  } = props
-
+export default () => {
  return (
    <Section
      title="Categories"

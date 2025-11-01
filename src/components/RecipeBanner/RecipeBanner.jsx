@@ -5,7 +5,7 @@ export default (props) => {
   const {
     className,
   } = props
-  
+
   return (
     <div
       className={clsx('recipe-banner', className)}

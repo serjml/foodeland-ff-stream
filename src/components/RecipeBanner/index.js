@@ -1,1 +1,1 @@
-export { default } from './RecipeBanner'
+export {default} from './RecipeBanner'

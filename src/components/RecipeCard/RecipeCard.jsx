@@ -1,13 +1,18 @@
-import './RecipeCard.jsx.scss'
+import './RecipeCard.scss'
 import {Image} from 'minista'
 import Tags from '@/components/Tags'
+import clsx from 'clsx'
+import Icon from '@/components/Icon'
 
 export default (props) => {
   const {
     title,
     tags,
     imgSrc,
+    isLiked,
   } = props
+
+  const likeButtonTitle = isLiked ? 'Dislike' : 'Like'
 
   return (
     <article className="recipe-card" >
@@ -22,6 +27,17 @@ export default (props) => {
           items={tags}
         />
       </a>
+      <button
+        className={clsx(
+          'recipe-card__button',
+          isLiked && 'is-liked'
+        )}
+        type="button"
+        aria-label={likeButtonTitle}
+        title={likeButtonTitle}
+      >
+        <Icon name="heart" hasFill />
+      </button>
     </article>
   )
 }

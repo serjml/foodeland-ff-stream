@@ -2,7 +2,7 @@ import './Recipes.scss'
 import Section from '@/layouts/Section'
 import Grid from '@/components/Grid'
 import RecipeCard from '@/components/RecipeCard'
-import recipes from './data.json'
+import items from './data.json'
 import RecipeBanner from '@/components/RecipeBanner'
 
 export default () => {
@@ -14,17 +14,17 @@ export default () => {
       description="Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim "
     >
       <Grid columns={3}>
-        {recipes.map((recipe, index) => {
-          const {type, ...rest} = recipe
+        {items.map((item, index) => {
+          const {type, ...rest} = item
 
           if (type === 'banner') {
             return (
-              <RecipeBanner {...rest} key={recipe.title} />
+              <RecipeBanner {...rest} key={item.title} />
             )
           }
 
           return (
-            <RecipeCard {...rest} key={recipe.title} />
+            <RecipeCard {...rest} key={item.title} />
           )
         })}
       </Grid>

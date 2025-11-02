@@ -17,7 +17,10 @@
 
     &--vertical {
       flex-direction: column;
-      text-align: center;
+
+      @include mobile-above {
+        text-align: center;
+      }
     }
   }
 

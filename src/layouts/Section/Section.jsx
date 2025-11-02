@@ -7,6 +7,7 @@ export default (props) => {
     className,
     title,
     titleId,
+    isHeaderVertical = false,
     description,
     linkLabel,
     children
@@ -17,7 +18,10 @@ export default (props) => {
       className={clsx('section', 'container', className)}
       aria-labelledby={titleId}
     >
-      <header className="section__header">
+      <header className={clsx(
+        'section__header',
+        isHeaderVertical && 'section__header--vertical'
+        )}>
         <h2
           className="section__title"
           id={titleId}

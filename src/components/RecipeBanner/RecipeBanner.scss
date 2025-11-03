@@ -11,6 +11,7 @@
   background:
     var(--recipeBannerImg) center/auto 100% no-repeat,
     linear-gradient(to bottom, #357255, #1C493C);
+  border-radius: var(--border-radius);
 
 
   @include hover {

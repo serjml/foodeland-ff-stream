@@ -8,10 +8,10 @@
   min-height: 360px;
   padding: 40px 40px 32px;
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #357255;
+  background:
+    var(--recipeBannerImg) center/auto 100% no-repeat,
+    linear-gradient(to bottom, #357255, #1C493C);
+
 
   @include hover {
     .recipe-banner__site {

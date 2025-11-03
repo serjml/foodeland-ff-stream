@@ -13,7 +13,7 @@ export default (props) => {
     <a
       className={clsx('recipe-banner', className)}
       href="/"
-      style={{ backgroundImage: `url('${bgImgSrc}')` }}
+      style={{ '--recipeBannerImg': `url('${bgImgSrc}')` }}
     >
       <img
         className="recipe-banner__title-image"

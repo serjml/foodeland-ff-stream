@@ -15,11 +15,12 @@ export default (props) => {
 
   return (
     <section
-      className={clsx('section', 'container', className)}
+      className={clsx('section', className)}
       aria-labelledby={titleId}
     >
       <header className={clsx(
         'section__header',
+        'container',
         isHeaderVertical && 'section__header--vertical'
         )}>
         <h2
@@ -43,7 +44,7 @@ export default (props) => {
           </Button>
         )}
       </header>
-      <div className="section__body">{children}</div>
+      <div className="section__body container">{children}</div>
     </section>
   )
 }
